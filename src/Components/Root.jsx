@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from './Header/Header';
+import { Outlet } from 'react-router-dom';
 
 const Root = () => {
     return (
         <div>
-            <h1> I am a root component</h1>
+            <Header />
+            <Outlet/>
         </div>
     );
 };
