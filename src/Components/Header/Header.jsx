@@ -5,16 +5,16 @@ const Header = () => {
     const links = (
         <>
             <li><NavLink to="/" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Home</NavLink></li>
-            <li><NavLink to="/about" className={({ isActive }) => isActive ? 'text-[#FF014F] font-bold' : ''}>About</NavLink></li>
-            <li><NavLink to="/skill" className={({ isActive }) => isActive ? 'text-[#FF014F] font-bold' : ''}>Skills</NavLink></li>
-            <li><NavLink to="/services" className={({ isActive }) => isActive ? 'text-[#FF014F] font-bold' : ''}>Services</NavLink></li>
-            <li><NavLink to="/projects" className={({ isActive }) => isActive ? 'text-[#FF014F] font-bold' : ''}>Projects</NavLink></li>
-            <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'text-[#FF014F] font-bold' : ''}>Contact</NavLink></li>
+            <li><NavLink to="/about" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>About</NavLink></li>
+            <li><NavLink to="/skill" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Skills</NavLink></li>
+            <li><NavLink to="/services" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Services</NavLink></li>
+            <li><NavLink to="/projects" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Projects</NavLink></li>
+            <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Contact</NavLink></li>
         </>
     );
 
     return (
-        <div className="sticky top-0 z-50 w-11/12 mx-auto">
+        <div className="sticky top-0 z-50  mx-auto">
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
