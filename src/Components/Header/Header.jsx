@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import About from '../Navbar/About/About';
 
 const Header = () => {
     const links = (
@@ -29,8 +30,8 @@ const Header = () => {
                             {links}
                         </ul>
                     </div>
-                    <NavLink to="/" className="btn btn-ghost text-2xl md:text-3xl font-bold">
-                        Portfolio
+                    <NavLink to="/" className="btn btn-ghost hidden md:block text-2xl md:text-3xl font-bold">
+                        Port<span className="text-blue-400">folio</span>
                     </NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -39,7 +40,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink to="/login" className="btn border border-2 px-6 text-lg">
+                    <NavLink to="/login" className="btn border  px-6 text-lg">
                         Login
                     </NavLink>
                 </div>

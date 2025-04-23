@@ -9,8 +9,8 @@ import mail from "../../../assets/mail.png";
 
 const Home = () => {
     return (
-        <div className="hero bg-base-200  overflow-hidden">
-            <div className="hero-content flex-col-reverse lg:flex-row-reverse  gap-7">
+        <div className="hero bg-base-300  overflow-hidden ">
+            <div className="hero-content flex-col lg:flex-row-reverse  gap-7">
                 {/* Hero Image */}
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -18,11 +18,15 @@ const Home = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
                 >
-                    <img
-                        src={hero_img}
-                        alt="Hero"
-                        className="w-full bg-white rounded-2xl shadow-md object-cover hover:scale-100 transition-transform duration-700"
-                    />
+                    <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-[3px] rounded-2xl bg-white shadow-md"
+                    >
+                        <img
+                            src={hero_img}
+                            alt="Hero"
+                            className="w-full h-auto rounded-2xl object-cover"
+                        />
+                    </div>
+
                 </motion.div>
 
                 {/* Text Content */}
