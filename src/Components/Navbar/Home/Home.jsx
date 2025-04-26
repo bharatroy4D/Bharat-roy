@@ -10,7 +10,7 @@ import mail from "../../../assets/mail.png";
 const Home = () => {
     return (
         <div className="hero bg-base-300  overflow-hidden ">
-            <div className="hero-content flex-col lg:flex-row-reverse  gap-7">
+            <div className="hero-content flex-col lg:flex-row-reverse   gap-7">
                 {/* Hero Image */}
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
