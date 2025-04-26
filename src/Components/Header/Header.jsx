@@ -8,7 +8,6 @@ const Header = () => {
             <li><NavLink to="/" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Home</NavLink></li>
             <li><NavLink to="/about" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>About</NavLink></li>
             <li><NavLink to="/skill" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Skills</NavLink></li>
-            <li><NavLink to="/services" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Services</NavLink></li>
             <li><NavLink to="/projects" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Projects</NavLink></li>
             <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'bg-gray-200 font-bold' : ''}>Contact</NavLink></li>
         </>
