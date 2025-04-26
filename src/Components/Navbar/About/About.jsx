@@ -1,76 +1,116 @@
-import React from 'react';
-import about_img from "../../../assets/about_img.jpg";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import linkedin from "../../../assets/linkedin.png";
 import github from "../../../assets/github.png";
 import twitter from "../../../assets/twitter.png";
 import instagram from "../../../assets/instagram.png";
 
-const About = () => {
-    return (
-        <div>
-            <section className="bg-base-200 py-8">
-                <div className="hero mx-auto px-4 max-w-7xl">
-                    <div className="hero-content flex-col gap-20 lg:flex-row items-center">
+const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-                        {/* Image animation */}
-                        <motion.img
-                            initial={{ x: -100, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1 }}
-                            src={about_img}
-                            alt="About Me"
-                            className="w-64 md:w-96 lg:w-[400px] shadow-md rounded-full"
-                        />
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    alert("Message sent!");
+  };
 
-                        {/* Text animation */}
-                        <motion.div
-                            initial={{ x: 100, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1 }}
-                        >
-                            <h4 className="text-lg text-[#F9004D] font-semibold mb-2">Visit My Portfolio</h4>
-                            <h1 className="text-4xl md:text-5xl font-bold text-[#394E6A]">About Me</h1>
-                            <p className="py-6 text-black text-justify">
-                                Hello! I'm a passionate and dedicated junior web developer with a knack for crafting
-                                user-friendly, responsive, and visually appealing websites. I specialize in creating clean,
-                                efficient code and bringing creative designs to life. With a solid foundation in front-end
-                                technologies like HTML, CSS, JavaScript, and frameworks such as React, I’m constantly
-                                expanding my skill set to stay ahead in the ever-evolving tech landscape.
-                            </p>
-                            <p className="text-black">
-                                I thrive on solving complex problems and turning ideas into digital
-                                experiences that make an impact. Whether it's collaborating with a team or tackling solo
-                                projects.
-                            </p>
-
-                            {/* Social Icons with animation and responsive wrap */}
-                            <motion.div
-                                className='flex flex-wrap gap-6 py-2 px-4 mt-2 rounded-3xl text-4xl w-fit border'
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                transition={{ staggerChildren: 0.2 }}
-                                variants={{ hidden: {}, visible: {} }}
-                            >
-                                {[{ src: linkedin, alt: "LinkedIn" }, { src: github, alt: "GitHub" }, { src: twitter, alt: "Twitter" }, { src: instagram, alt: "Instagram" }].map(({ src, alt }, index) => (
-                                    <motion.img
-                                        key={index}
-                                        src={src}
-                                        alt={alt}
-                                        className="w-7 h-7 cursor-pointer"
-                                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                                        transition={{ duration: 0.4 }}
-                                        whileHover={{ scale: 1.2 }}
-                                    />
-                                ))}
-                            </motion.div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
+  return (
+    <section className="py-20 bg-gradient-to-r from-[#FF014F] to-[#6A1B9A]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <motion.h2
+            className="text-4xl font-extrabold text-white mb-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Contact Me
+          </motion.h2>
+          <motion.p
+            className="text-lg text-white opacity-70"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            I would love to hear from you! Reach out to me with any questions.
+          </motion.p>
         </div>
-    );
+
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          {/* Contact Form */}
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="w-full max-w-lg bg-white p-8 rounded-xl shadow-lg"
+          >
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-gray-700 mb-2">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF014F] focus:border-transparent"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="message" className="block text-gray-700 mb-2">Your Message</label>
+                <textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF014F] focus:border-transparent"
+                  rows="5"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full py-2 px-4 bg-[#FF014F] text-white font-semibold rounded-lg shadow-md hover:bg-[#FF1655] transition duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </motion.div>
+
+          {/* Social Media Icons */}
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-center lg:text-left"
+          >
+            <h3 className="text-xl text-white mb-4 font-semibold">Connect with me:</h3>
+            <motion.div
+              className="flex justify-center lg:justify-start gap-6 mt-4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ staggerChildren: 0.2 }}
+            >
+              {[{ src: linkedin, alt: "LinkedIn" }, { src: github, alt: "GitHub" }, { src: twitter, alt: "Twitter" }, { src: instagram, alt: "Instagram" }].map(({ src, alt }, index) => (
+                <motion.a
+                  key={index}
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, rotate: 15 }}
+                  className="w-10 h-10 rounded-full bg-white flex justify-center items-center transition-all duration-300 transform hover:bg-[#FF014F] shadow-md"
+                >
+                  <img src={src} alt={alt} className="w-6 h-6 object-contain" />
+                </motion.a>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default About;
+export default Contact;
