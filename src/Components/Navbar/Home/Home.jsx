@@ -10,7 +10,7 @@ import mail from "../../../assets/mail.png";
 const Home = () => {
     return (
         <div className="hero bg-base-300  overflow-hidden ">
-            <div className="hero-content flex-col lg:flex-row-reverse   gap-7">
+            <div className="hero-content flex-col lg:flex-row-reverse gap-5 w-[90%] mx-auto">
                 {/* Hero Image */}
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -18,7 +18,7 @@ const Home = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
                 >
-                    <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-[3px] rounded-2xl bg-white shadow-md"
+                    <div className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto rounded-2xl bg-white shadow-md"
                     >
                         <img
                             src={hero_img}
@@ -72,20 +72,7 @@ const Home = () => {
                         <div className="flex items-center gap-2 text-sm py-2">
                             <img src={mail} alt="Email" className="w-6" />
                             <p>bharatroy1005@gmail.com</p>
-                        </div>
-                        {/* <div className="flex items-center gap-2 text-sm">
-                            <img src={map} alt="Location" className="w-6" />
-                            <p>
-                                <a
-                                    href="https://www.google.com/maps/place/Rangpur"
-                                    className="hover:text-red-600"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Rangpur, Dhaka (Bangladesh)
-                                </a>
-                            </p>
-                        </div> */}
+                        </div>    
                     </div>
 
                     {/* Resume Download */}
