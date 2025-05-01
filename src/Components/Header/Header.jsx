@@ -87,7 +87,7 @@ const Header = () => {
                     isOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
             >
-                <div className="px-4 py-1 flex justify-between items-center border-b">
+                <div className="px-4 py-1 flex justify-between items-center border-b border-gray-300">
                     <h2 className="text-lg font-bold">Menu</h2>
                     <button onClick={() => setIsOpen(false)} className="text-2xl font-bold">
                         &times;

@@ -4,23 +4,8 @@ import bharat from '../../../assets/bharat.png'
 
 const About = () => {
   return (
-    <section className="bg-base-300 py-6">
-      <div className="w-[88%] mx-auto">
-        {/* Section Title */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#FF014F] to-[#6A1B9A]">
-            About Me
-          </h2>
-          <p className="text-gray-400 text-lg">
-            A passionate frontend developer dedicated to crafting immersive user experiences.
-          </p>
-        </motion.div> */}
-
+    <section className="bg-base-300 py-4">
+      <div className="w-[88%] mx-auto">    
         {/* Content */}
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Profile Image */}
