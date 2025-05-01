@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import user from "../../../assets/user.png";
+// import user from "../../../assets/user.png";
 import hero_img from "../../../assets/hero-img.png";
-import {FaGithub, FaLinkedin,  } from "react-icons/fa";
+import { FaGithub, FaLinkedin, } from "react-icons/fa";
 import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 import { IoEye } from "react-icons/io5";
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -14,8 +14,7 @@ const Home = () => {
             <div className="hero-content flex-col lg:flex-row-reverse gap-5 w-[90%] mx-auto">
                 {/* Hero Image */}
                 <motion.div
-                                        whileHover={{ scale: 1.03 }}
-
+                    whileHover={{ scale: 1.03 }}
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
@@ -62,12 +61,12 @@ const Home = () => {
                             I am a web designer and developer working with clients around the world.
                             Currently based in Bangladesh.
                         </p>
-                        <div className="flex items-center gap-3 text-xl">                         
-                            <FaFacebook/>
-                            <FaXTwitter/>
-                            <FaLinkedin/>
-                            <FaGithub/>
-                        </div>                    
+                        <div className="flex items-center gap-3 text-xl">
+                            <FaFacebook />
+                            <FaXTwitter />
+                            <FaLinkedin />
+                            <FaGithub />
+                        </div>
                     </div>
                     {/* Resume Download */}
                     <motion.div
@@ -80,14 +79,14 @@ const Home = () => {
                                 whileHover={{ scale: 1.05 }}
                                 className="flex items-center gap-2 py-2 px-4 rounded bg-[#394E6A] text-white hover:bg-red-400 transition"
                             >
-                                Resume <IoEye/>
+                                Resume <IoEye />
 
                             </motion.button>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 className="flex items-center gap-2 py-2 px-4 rounded bg-[#394E6A] text-white hover:bg-red-400 transition"
                             >
-                                Download <MdOutlineFileDownload className="text-xl"/>
+                                Download <MdOutlineFileDownload className="text-xl" />
 
                             </motion.button>
                         </div>
