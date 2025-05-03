@@ -36,7 +36,7 @@ const Header = () => {
     return (
         <>
             <header className="sticky top-0 z-50 bg-base-100 w-full shadow-md">
-                <div className="w-[87%] mx-auto flex items-center justify-between py-2">
+                <div className="  lg:max-w-7xl mx-auto flex items-center justify-between py-2 px-20  ">
                     {/* Logo */}
                     <NavLink to="/" className="text-2xl md:text-3xl font-bold whitespace-nowrap">
                         Port<span className="text-blue-400">folio</span>
@@ -53,7 +53,7 @@ const Header = () => {
                     <div className="hidden lg:flex">
                         <NavLink
                             to="/login"
-                            className="btn border bg-[#394E6A] text-white hover:bg-red-400 px-6 text-lg"
+                            className="btn border bg-blue-800 text-white hover:bg-red-400 px-6 text-lg"
                         >
                             Hire Me
                         </NavLink>
@@ -83,9 +83,8 @@ const Header = () => {
 
             {/* Mobile Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-fit w-48 bg-base-100 z-[999] shadow-lg rounded transform transition-transform duration-300 ${
-                    isOpen ? 'translate-x-0' : 'translate-x-full'
-                }`}
+                className={`fixed top-0 right-0 h-fit w-48 bg-base-100 z-[999] shadow-lg rounded transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+                    }`}
             >
                 <div className="px-4 py-1 flex justify-between items-center border-b border-gray-300">
                     <h2 className="text-lg font-bold">Menu</h2>

@@ -19,7 +19,7 @@ const backendSkills = [
 const Skills = () => {
   return (
     <section id="skills" className="py-6 bg-base-300">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-20">
         {/* Frontend Skills */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-[#FF014F] mb-6">Frontend Skills</h3>

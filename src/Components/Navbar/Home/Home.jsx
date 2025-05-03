@@ -49,16 +49,16 @@ const Home = () => {
     return (
         <div className="bg-base-300 overflow-hidden">
             {/* Hero Section */}
-            <div className="hero-content flex flex-col lg:flex-row-reverse gap-6 py-5 w-[90%] mx-auto">
+            <div className="hero-content flex flex-col lg:flex-row-reverse gap-6 py-5 max-w-7xl px-20 mx-auto">
                 {/* Image */}
                 <motion.div
                     whileHover={{ scale: 1.03 }}
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 1 }}
-                    className="w-full lg:w-[40%]"
+                    className="w-full lg:w-[39%]"
                 >
-                    <div className="bg-white rounded-lg shadow-md p-3">
+                    <div className="bg-white rounded-xl shadow-md p-3">
                         <img
                             src={hero_img}
                             alt="Hero"
@@ -74,7 +74,7 @@ const Home = () => {
                     transition={{ duration: 1.2 }}
                     className="flex-1 space-y-6"
                 >
-                    <div className="bg-base-100 p-6 rounded-lg shadow-md">
+                    <div className="bg-base-100 p-6 rounded-xl shadow-md">
                         <img
                             src={hero_img}
                             alt="User"
@@ -109,14 +109,14 @@ const Home = () => {
                     {/* Resume Section */}
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="bg-base-100 p-6 rounded-lg shadow-md"
+                        className="bg-base-100 p-6 rounded-xl shadow-md"
                     >
                         <h3 className="font-semibold mb-4">Download My Resume</h3>
                         <div className="flex flex-wrap gap-4">
-                            <button className="flex items-center gap-2 px-4 py-2 rounded bg-[#394E6A] text-white hover:bg-red-400 transition">
+                            <button className="flex items-center gap-2 px-4 py-2 rounded bg-blue-900 text-white hover:bg-red-400 transition">
                                 Resume <IoEye />
                             </button>
-                            <button className="flex items-center gap-2 px-4 py-2 rounded bg-[#394E6A] text-white hover:bg-red-400 transition">
+                            <button className="flex items-center gap-2 px-4 py-2 rounded bg-blue-900 text-white hover:bg-red-400 transition">
                                 Download <MdOutlineFileDownload />
                             </button>
                         </div>
@@ -126,7 +126,7 @@ const Home = () => {
 
             {/* Toolbox Section */}
             <section className="bg-base-300 py-6">
-                <div className="w-[90%] mx-auto flex flex-col md:flex-row gap-10">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-20">
                     {/* Left */}
                     <motion.div
                         whileHover={{ scale: 1.03 }}
@@ -135,25 +135,25 @@ const Home = () => {
                         transition={{ duration: 1 }}
                         className="md:w-[30%] w-full bg-white p-6 rounded-xl shadow-lg text-center"
                     >
-                        <h3 className="text-2xl font-bold mb-4 text-[#394E6A] border-b border-gray-400 pb-3">
+                        <h3 className="text-xl font-bold text-left mb-4 text-[#394E6A] border-b border-gray-400 pb-3">
                             🎓 Education Qualification
                         </h3>
 
                         <div className="space-y-4 text-left text-gray-700">
                             <div>
-                                <h4 className="font-semibold text-lg">B.A (Honours) in Political Science</h4>
+                                <h4 className="font-medium ">B.A (Honours) in Political Science</h4>
                                 <p className="text-sm">Dinajpur Government College, Dinajpur</p>
                                 <p className="text-sm text-gray-500">2023 - Present (1st Year)</p>
                             </div>
 
                             <div>
-                                <h4 className="font-semibold text-lg">Higher Secondary Certificate (HSC)</h4>
+                                <h4 className="font-medium ">Higher Secondary Certificate (HSC)</h4>
                                 <p className="text-sm">Board Hard College, Dinajpur</p>
                                 <p className="text-sm text-gray-500">2021 - 2022</p>
                             </div>
 
                             <div>
-                                <h4 className="font-semibold text-lg">Secondary School Certificate (SSC)</h4>
+                                <h4 className="font-medium ">Secondary School Certificate (SSC)</h4>
                                 <p className="text-sm">Betura BL High School, Dinajpur</p>
                                 <p className="text-sm text-gray-500">2019 - 2020</p>
                             </div>
@@ -169,9 +169,9 @@ const Home = () => {
                         className="md:w-[70%] w-full"
                     >
                         {/* Skills Title */}
-                        <h3 className="text-2xl font-bold mb-6 text-[#394E6A] border-b border-gray-300 pb-3">
+                        {/* <h3 className="text-2xl font-bold mb-6 text-[#394E6A] border-b border-gray-300 pb-3">
                             🚀 Skills 
-                        </h3>
+                        </h3> */}
 
                         {/* Skills Grid */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">

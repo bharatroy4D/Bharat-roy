@@ -5,7 +5,7 @@ import { FaFacebookF, FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa
 const Contact = () => {
   return (
     <section id="contact" className="bg-base-200 py-6">
-      <div className="w-[90%] max-w-7xl mx-auto ">
+      <div className=" max-w-7xl px-20 mx-auto ">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           
           {/* Contact Info */}

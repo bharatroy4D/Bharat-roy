@@ -5,9 +5,9 @@ import bharat from '../../../assets/bharat.png'
 const About = () => {
   return (
     <section className="bg-base-300 py-4">
-      <div className="w-[88%] mx-auto">    
+      <div className="max-w-7xl px-20 mx-auto">
         {/* Content */}
-        <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Profile Image */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
