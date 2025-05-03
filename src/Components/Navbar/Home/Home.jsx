@@ -143,19 +143,19 @@ const Home = () => {
                             <div>
                                 <h4 className="font-medium ">B.A (Honours) in Political Science</h4>
                                 <p className="text-sm">Dinajpur Government College, Dinajpur</p>
-                                <p className="text-sm text-gray-500">2023 - Present (1st Year)</p>
+                                <p className="text-sm text-gray-500">2022 - Present (1st Year)</p>
                             </div>
 
                             <div>
                                 <h4 className="font-medium ">Higher Secondary Certificate (HSC)</h4>
                                 <p className="text-sm">Board Hard College, Dinajpur</p>
-                                <p className="text-sm text-gray-500">2021 - 2022</p>
+                                <p className="text-sm text-gray-500">2020 - 2021</p>
                             </div>
 
                             <div>
                                 <h4 className="font-medium ">Secondary School Certificate (SSC)</h4>
                                 <p className="text-sm">Betura BL High School, Dinajpur</p>
-                                <p className="text-sm text-gray-500">2019 - 2020</p>
+                                <p className="text-sm text-gray-500">2018 - 2019</p>
                             </div>
                         </div>
                     </motion.div>

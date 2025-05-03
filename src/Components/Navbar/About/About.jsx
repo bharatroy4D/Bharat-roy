@@ -13,12 +13,12 @@ const About = () => {
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-full md:w-1/2 "
+            className=" "
           >
             <img
               src={bharat}
               alt="Profile"
-              className="rounded-xl shadow-xl w-full max-w-sm mx-auto bg-white"
+              className="rounded-xl shadow-md w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white"
             />
           </motion.div>
 
