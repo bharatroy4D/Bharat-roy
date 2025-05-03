@@ -41,7 +41,7 @@ const projects = [
 const Projects = () => {
     return (
         <section id="projects" className="bg-base-200 py-6">
-            <div className=" max-w-7xl px-20 mx-auto">
+            <div className=" max-w-7xl px-5 md:10 lg:px-20 mx-auto">
               
                 {/* Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">

@@ -36,7 +36,7 @@ const Header = () => {
     return (
         <>
             <header className="sticky top-0 z-50 bg-base-100 w-full shadow-md">
-                <div className="  lg:max-w-7xl mx-auto flex items-center justify-between py-2 px-20  ">
+                <div className="  lg:max-w-7xl mx-auto flex items-center justify-between py-2 px-5 md:10 lg:px-20  ">
                     {/* Logo */}
                     <NavLink to="/" className="text-2xl md:text-3xl font-bold whitespace-nowrap">
                         Port<span className="text-blue-400">folio</span>

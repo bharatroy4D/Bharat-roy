@@ -5,7 +5,7 @@ import bharat from "../../../assets/bharat.png";
 const About = () => {
   return (
     <section className="bg-base-300 py-12">
-      <div className="max-w-7xl px-6 md:px-12 lg:px-20 mx-auto">
+      <div className="max-w-7xl px-5 md:px-10 lg:px-20 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-10">
           
           {/* Image Section */}

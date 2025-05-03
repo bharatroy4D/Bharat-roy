@@ -49,7 +49,7 @@ const Home = () => {
     return (
         <div className="bg-base-300 overflow-hidden">
             {/* Hero Section */}
-            <div className="hero-content flex flex-col lg:flex-row-reverse gap-6 py-5 max-w-7xl px-20 mx-auto">
+            <div className="hero-content flex flex-col lg:flex-row-reverse gap-6 py-5 max-w-7xl px-5 md:10 lg:px-20 mx-auto">
                 {/* Image */}
                 <motion.div
                     whileHover={{ scale: 1.03 }}
@@ -126,7 +126,7 @@ const Home = () => {
 
             {/* Toolbox Section */}
             <section className="bg-base-300 py-6">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-20">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-5 md:10 lg:px-20">
                     {/* Left */}
                     <motion.div
                         whileHover={{ scale: 1.03 }}
