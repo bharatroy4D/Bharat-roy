@@ -1,15 +1,27 @@
 import React from "react";
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-base-300 py-10">
-      <div className="max-w-7xl px-6 md:px-12 mx-auto">
-        <div className="flex flex-col md:flex-row gap-8">
-
+    <section id="contact" className="bg-base-300 py-6">
+      <div className="max-w-7xl px-6 md:px-12 lg:px-20 mx-auto">
+        <motion.div
+          className="flex flex-col md:flex-row gap-6"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {/* Left: Contact Info */}
-          <div className="w-full md:w-1/2 bg-white shadow-lg rounded-2xl p-8 flex flex-col justify-between">
+          <motion.div
+            className="w-full md:w-[45%] bg-white shadow-lg rounded-2xl p-6 flex flex-col justify-between"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div>
               <h2 className="text-3xl font-bold text-[#394E6A] mb-6 border-b-2 border-[#FF014F] inline-block pb-1">
                 Contact Information
@@ -48,22 +60,7 @@ const Contact = () => {
                     <h4 className="text-gray-800 font-semibold">Rangpur, Dhaka (Bangladesh)</h4>
                   </div>
                 </div>
-
-                {/* Working Hours */}
-                <div className="flex items-start gap-4 p-4 bg-[#f9fafb] rounded-xl hover:shadow-md transition">
-                  <div className="p-3 bg-[#FF014F] text-white rounded-full">
-                    <FiClock className="text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-sm">Working Hours</p>
-                    <h4 className="text-gray-800 font-semibold">Sat - Thu: 9 AM - 8 PM</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-6 text-sm text-gray-600">
-                For urgent queries, feel free to email us any time.
-              </div>
+              </div>          
             </div>
 
             {/* Social Links */}
@@ -76,22 +73,28 @@ const Contact = () => {
                   <a
                     key={i}
                     href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 text-[#394E6A] flex items-center justify-center hover:bg-[#FF014F] hover:text-white transition"
+                    className="w-10 h-10  border rounded-full text-[#394E6A] flex items-center justify-center hover:bg-[#FF014F] hover:text-white transition"
                   >
                     <Icon className="text-lg" />
                   </a>
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Contact Form */}
-          <div className="w-full md:w-1/2">
-            <div className="h-full bg-white shadow-lg rounded-2xl p-8 flex flex-col justify-between">
+          <motion.div
+            className="w-full md:w-[55%]"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="h-full bg-white shadow-lg rounded-2xl p-6 flex flex-col justify-between">
               <h2 className="text-3xl font-bold text-[#394E6A] mb-6 border-b-2 border-[#FF014F] inline-block pb-1">
                 Get in Touch
               </h2>
-              <form className="flex flex-col gap-6 flex-1 justify-between">
+              <form className="flex flex-col gap-6 flex-1 ">
                 <div>
                   <label className="block mb-2 text-sm font-semibold text-gray-700">Name</label>
                   <input
@@ -126,9 +129,8 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-          </div>
-
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

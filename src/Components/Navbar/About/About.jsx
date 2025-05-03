@@ -1,55 +1,70 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bharat from '../../../assets/bharat.png'
+import bharat from "../../../assets/bharat.png";
 
 const About = () => {
   return (
-    <section className="bg-base-300 py-4">
-      <div className="max-w-7xl px-20 mx-auto">
-        {/* Content */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          {/* Profile Image */}
+    <section className="bg-base-300 py-12">
+      <div className="max-w-7xl px-6 md:px-12 lg:px-20 mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          
+          {/* Image Section */}
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className=" "
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full md:w-[45%]"
           >
             <img
               src={bharat}
               alt="Profile"
-              className="rounded-xl shadow-md w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white"
+              className="rounded-2xl shadow-xl w-full object-cover"
             />
           </motion.div>
 
-          {/* Description */}
+          {/* Content Section */}
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="w-full md:w-1/2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="w-full md:w-[55%]"
           >
-            <h3 className="text-2xl font-semibold mb-4">Who am I?</h3>
-            <p className="text-gray-500 mb-4">
-              I’m a creative and detail-oriented frontend developer with a strong background in React,
-              Tailwind CSS, and modern animation libraries like Framer Motion. I focus on writing clean,
-              scalable, and maintainable code while delivering high-quality user experiences.
+            <h2 className="text-4xl font-bold text-[#394E6A] mb-4">
+              About Me
+            </h2>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              I’m a passionate and detail-oriented Frontend Developer skilled in React, Tailwind CSS, and animation libraries like Framer Motion. I specialize in building visually engaging and performant websites with clean, maintainable code.
             </p>
-            <p className="text-gray-500">
-              My goal is to merge beautiful design with solid code, ensuring fast, accessible, and responsive
-              websites. Every line of code I write is a step toward creating seamless digital experiences.
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              My mission is to bridge the gap between design and development — bringing interfaces to life with smooth animations, responsive layouts, and optimal performance.
             </p>
 
-            {/* Skills List */}
-            <div className="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-200">
-              <span className="bg-[#1f1f1f] px-4 py-2 rounded">React</span>
-              <span className="bg-[#1f1f1f] px-4 py-2 rounded">Tailwind CSS</span>
-              <span className="bg-[#1f1f1f] px-4 py-2 rounded">Framer Motion</span>
-              <span className="bg-[#1f1f1f] px-4 py-2 rounded">JavaScript (ES6+)</span>
-              <span className="bg-[#1f1f1f] px-4 py-2 rounded">Responsive Design</span>
-              <span className="bg-[#1f1f1f] px-4 py-2 rounded">Git & GitHub</span>
+            <div>
+              <h4 className="text-xl font-semibold text-[#394E6A] mb-3">
+                Skills
+              </h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                {[
+                  "React",
+                  "Tailwind CSS",
+                  "Framer Motion",
+                  "JavaScript (ES6+)",
+                  "Responsive Design",
+                  "Git & GitHub",
+                ].map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="px-4 py-2 bg-[#1f1f1f] text-white rounded-full text-center"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
