@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-base-300 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+    <section id="contact" className="bg-base-300 py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
         <motion.div
           className="flex flex-col md:flex-row gap-8"
           initial={{ opacity: 0, y: 50 }}
