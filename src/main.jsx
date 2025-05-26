@@ -13,6 +13,7 @@ import Skill from './Components/Navbar/Skill/Skill.jsx';
 import Projects from './Components/Navbar/Projects/Projects.jsx';
 import Contact from './Components/Navbar/Contact/Contact.jsx';
 import Login from './Components/Navbar/Login/Login.jsx';
+import HireMe from './Components/HireMe/HireMe.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,8 +41,8 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/login",
-        element: <Login />,
+        path: "/hireMe",
+        element: <HireMe />,
       },
     ]
   },

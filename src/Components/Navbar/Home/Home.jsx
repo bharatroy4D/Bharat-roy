@@ -75,11 +75,22 @@ const Home = () => {
                     className="flex-1 space-y-6"
                 >
                     <div className="bg-base-100 p-6 rounded-xl shadow-md">
-                        <img
+                        <motion.img
                             src={hero_img}
                             alt="User"
-                            className="w-14 mb-3 rounded-full bg-base-300"
+                            className="w-14 mb-3 rounded-full bg-base-300 border"
+                            animate={{
+                                scale: [1, 1.2, 1],
+                                borderColor: ["#FF0000", "#3B82F6", "#FF0000"], // red -> blue -> red
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
+                            style={{ borderStyle: "solid" }}
                         />
+
                         <h1 className="text-3xl md:text-4xl font-bold">
                             Hi, I am <span className="text-[#FF014F]">Bharat</span>
                         </h1>
@@ -101,9 +112,14 @@ const Home = () => {
                         <div className="flex items-center gap-4 text-xl text-gray-700">
                             <FaFacebook className="hover:text-blue-500 cursor-pointer" />
                             <FaXTwitter className="hover:text-black cursor-pointer" />
-                            <FaLinkedin className="hover:text-blue-700 cursor-pointer" />
-                            <FaGithub className="hover:text-black cursor-pointer" />
+                            <a href="https://www.linkedin.com/in/bharatroy1005/" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin className="hover:text-blue-700 cursor-pointer" />
+                            </a>
+                            <a href="https://github.com/bharatroy4D" target="_blank" rel="noopener noreferrer">
+                                <FaGithub className="hover:text-black cursor-pointer" />
+                            </a>
                         </div>
+
                     </div>
 
                     {/* Resume Section */}
@@ -113,12 +129,15 @@ const Home = () => {
                     >
                         <h3 className="font-semibold mb-4">Download My Resume</h3>
                         <div className="flex flex-wrap gap-4">
-                            <button className="flex items-center gap-2 px-4 py-2 rounded bg-blue-900 text-white hover:bg-red-400 transition">
-                                Resume <IoEye />
+                            <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-200 text-gray-700 hover:bg-blue-300 transition">
+                                <a href="" className="flex items-center gap-2 ">
+                                    Download <MdOutlineFileDownload />
+                                </a>
                             </button>
-                            <button className="flex items-center gap-2 px-4 py-2 rounded bg-blue-900 text-white hover:bg-red-400 transition">
-                                Download <MdOutlineFileDownload />
+                            <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-800 transition">
+                                <a href="https://drive.google.com/file/d/1ewYkksnTMzcMpkdw4xSP7HDTba8g3yth/view" className="flex gap-2 items-center"> Resume <IoEye /></a>
                             </button>
+
                         </div>
                     </motion.div>
                 </motion.div>

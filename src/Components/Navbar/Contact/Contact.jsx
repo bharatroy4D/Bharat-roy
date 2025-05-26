@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+const LoadingDots = () => (
+  <div className="min-h-screen flex justify-center items-center bg-base-300">
+    <div className="flex gap-3">
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="w-3 h-12 rounded-full bg-[#FF014F]"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 1, repeat: Infinity, delay: i * 0.15 }}
+        />
+      ))}
+    </div>
+  </div>
+);
+
 const Contact = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingDots />;
+  }
+
   return (
     <section id="contact" className="bg-base-300 py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
@@ -28,7 +54,6 @@ const Contact = () => {
               </h2>
 
               <div className="space-y-5">
-                {/* Contact Item */}
                 {[ 
                   { icon: <FiPhone className="text-xl" />, label: "Phone", value: "+8801714414775" },
                   { icon: <FiMail className="text-xl" />, label: "Email", value: "bharartoy1005@gmail.com" },

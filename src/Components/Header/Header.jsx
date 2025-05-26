@@ -52,8 +52,8 @@ const Header = () => {
                     {/* Hire Me button */}
                     <div className="hidden lg:flex">
                         <NavLink
-                            to="/login"
-                            className="btn border bg-blue-800 text-white hover:bg-red-400 px-6 text-lg"
+                            to="/hireMe"
+                            className="btn border bg-blue-500 text-white hover:bg-blue-800 px-6 rounded-full text-lg"
                         >
                             Hire Me
                         </NavLink>

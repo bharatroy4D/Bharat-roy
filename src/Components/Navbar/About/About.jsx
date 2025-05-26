@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import bharat from "../../../assets/bharat.png";
 
 const About = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex justify-center items-center bg-base-300">
+        <div className="flex gap-2">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className="w-3 h-12 bg-[#FF014F] animate-bounce"
+              style={{ animationDelay: `${i * 0.1}s` }}
+            ></div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <section className="bg-base-300 py-12">
       <div className="max-w-7xl px-5 md:px-10 lg:px-20 mx-auto">

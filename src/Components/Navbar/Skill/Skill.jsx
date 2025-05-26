@@ -1,13 +1,8 @@
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-  FaGitAlt,
-  FaGithub,
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
+  FaDatabase, FaGitAlt, FaGithub,
 } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb, SiExpress, SiRedux } from "react-icons/si";
 
@@ -39,31 +34,57 @@ const SkillCard = ({ skill, index }) => (
     transition={{ duration: 0.6, delay: index * 0.1 }}
     viewport={{ once: true }}
     whileHover={{
-      scale: 1.03,
-      boxShadow: "0px 15px 40px rgba(255, 106, 137, 0.5)", // Colored shadow
+      scale: 1.04,
+      boxShadow: "0 10px 30px rgba(255, 106, 137, 0.3)",
       transition: { duration: 0.4 },
     }}
-    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_#ff6a89] transition-all duration-500"
+    className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-[0_0_25px_#ff6a89] transition-all duration-500 cursor-default"
   >
-    <div className="flex items-center justify-between mb-2">
-      <div className="flex items-center gap-3">
+    <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center gap-4">
         {skill.icon}
-        <h4 className="text-lg font-semibold">{skill.name}</h4>
+        <h4 className="text-lg font-semibold text-gray-900">{skill.name}</h4>
       </div>
-      <span className="text-sm text-gray-500">{skill.level}%</span>
+      <span className="text-sm font-medium text-gray-500">{skill.level}%</span>
     </div>
-    <div className="w-full bg-gray-200 rounded-full h-4">
+    <div className="w-full bg-gray-200 rounded-full h-5 overflow-hidden">
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: `${skill.level}%` }}
-        transition={{ duration: 1 }}
-        className="h-4 rounded-full bg-gradient-to-r from-[#FF014F] to-[#ff6a89]"
-      ></motion.div>
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="h-5 rounded-full bg-gradient-to-r from-[#FF014F] via-[#FF5A7D] to-[#FF6A89]"
+      />
     </div>
   </motion.div>
 );
 
+const LoadingDots = () => (
+  <div className="min-h-screen flex justify-center items-center bg-base-300">
+    <div className="flex gap-3">
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="w-3 h-12 rounded-full bg-[#FF014F]"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 1, repeat: Infinity, delay: i * 0.15 }}
+        />
+      ))}
+    </div>
+  </div>
+);
+
 const Skills = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingDots />;
+  }
+
   return (
     <section id="skills" className="py-6 bg-base-300">
       <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-20">
