@@ -129,7 +129,7 @@ const Home = () => {
                     >
                         <h3 className="font-semibold mb-4">Download My Resume</h3>
                         <div className="flex flex-wrap gap-4">
-                            <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-200 text-gray-700 hover:bg-blue-300 transition">
+                            <button className="flex items-center gap-2 px-4 py-2 border  rounded-full transition">
                                 <a href="" className="flex items-center gap-2 ">
                                     Download <MdOutlineFileDownload />
                                 </a>
