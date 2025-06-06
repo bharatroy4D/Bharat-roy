@@ -71,6 +71,7 @@ const Projects = () => {
   return (
     <section id="projects" className="bg-base-200 py-6">
       <div className="max-w-7xl px-5 md:px-10 lg:px-20 mx-auto">
+        <h3 className="text-3xl font-bold  text-gray-600 mb-6">My Projects</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
           {projects.map((project, index) => (
             <motion.div

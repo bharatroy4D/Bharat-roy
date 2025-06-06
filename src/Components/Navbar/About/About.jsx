@@ -18,7 +18,7 @@ const About = () => {
             <div
               key={i}
               className="w-3 h-12 bg-[#FF014F] animate-bounce"
-              style={{ animationDelay: `${i * 0.1}s` }}
+              style={{ animationDelay: `${i * 0.5}s` }}
             ></div>
           ))}
         </div>
@@ -27,7 +27,7 @@ const About = () => {
   }
 
   return (
-    <section className="bg-base-300 py-12">
+    <section className="bg-base-200 py-12">
       <div className="max-w-7xl px-5 md:px-10 lg:px-20 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-10">
           
@@ -42,7 +42,7 @@ const About = () => {
             <img
               src={bharat}
               alt="Profile"
-              className="rounded-2xl shadow-xl w-full object-cover"
+              className="rounded-2xl shadow-xl bg-white w-full object-cover"
             />
           </motion.div>
 

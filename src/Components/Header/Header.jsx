@@ -44,7 +44,7 @@ const Header = () => {
 
                     {/* Navbar links - hidden on mobile */}
                     <nav className="hidden lg:flex flex-1 justify-center">
-                        <ul className="menu menu-horizontal gap-4 px-1 text-lg font-medium">
+                        <ul className="menu menu-horizontal gap-4 lato px-1 text-lg font-medium">
                             {links}
                         </ul>
                     </nav>

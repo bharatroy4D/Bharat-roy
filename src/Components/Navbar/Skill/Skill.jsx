@@ -86,11 +86,11 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="py-6 bg-base-300">
+    <section id="skills" className="py-6 bg-base-200">
       <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-20">
         {/* Frontend Skills */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-[#FF014F] mb-6">Frontend Skills</h3>
+          <h3 className="text-3xl font-bold text-gray-600 mb-6">Frontend Skills</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {frontendSkills.map((skill, index) => (
               <SkillCard key={index} skill={skill} index={index} />
@@ -100,7 +100,7 @@ const Skills = () => {
 
         {/* Backend Skills */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-[#FF014F] mb-6">Backend & Tools</h3>
+          <h3 className="text-3xl font-bold text-gray-600 mb-6">Backend Skills</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {backendSkills.map((skill, index) => (
               <SkillCard key={index} skill={skill} index={index} />
@@ -110,7 +110,7 @@ const Skills = () => {
 
         {/* Other Skills */}
         <div>
-          <h3 className="text-2xl font-bold text-[#FF014F] mb-6">Other Skills</h3>
+          <h3 className="text-3xl font-bold text-gray-600 mb-6">Other Skills</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherSkills.map((skill, index) => (
               <SkillCard key={index} skill={skill} index={index} />

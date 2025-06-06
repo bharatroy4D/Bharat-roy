@@ -14,6 +14,8 @@ import Projects from './Components/Navbar/Projects/Projects.jsx';
 import Contact from './Components/Navbar/Contact/Contact.jsx';
 import Login from './Components/Navbar/Login/Login.jsx';
 import HireMe from './Components/HireMe/HireMe.jsx';
+import Hero from './Components/Navbar/Hero/Hero.jsx';
+import Qualification from './Components/Navbar/Qualification/Qualification.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
         path: "/hireMe",
         element: <HireMe />,
       },
+      {
+        path:'/hero',
+        element:<Hero/>
+      },
+      {
+        path:'/qualification',
+        element:<Qualification/>
+      }
     ]
   },
 ]);
