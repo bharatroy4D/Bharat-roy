@@ -21,7 +21,7 @@ const projectData = [
     techStack: ["React", "Framer Motion", "Tailwind"]
   },
   {
-    title: "E-commerce Platform",
+    title: "E-commerce ",
     description: "Dynamic blog platform with user authentication and rich-text editor section title.",
     image: "https://i.ibb.co/PvH5QQjm/download-6.jpg",
     liveLink: "https://bacola-grosary.netlify.app/",
