@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
-  FaDatabase, FaGitAlt, FaGithub,
+  FaGitAlt, FaGithub,
 } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb, SiExpress, SiRedux } from "react-icons/si";
+import { useTheme } from "../../../context/ThemeProvider";  // Theme Context import
 
 const frontendSkills = [
   { name: "HTML5", level: 90, icon: <FaHtml5 className="text-orange-500" size={24} /> },
@@ -27,7 +28,7 @@ const otherSkills = [
   { name: "Testing (Jest)", level: 70, icon: <FaGithub className="text-gray-600" size={24} /> },
 ];
 
-const SkillCard = ({ skill, index }) => (
+const SkillCard = ({ skill, index, theme }) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -38,16 +39,32 @@ const SkillCard = ({ skill, index }) => (
       boxShadow: "0 10px 30px rgba(255, 106, 137, 0.3)",
       transition: { duration: 0.4 },
     }}
-    className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-[0_0_25px_#ff6a89] transition-all duration-500 cursor-default"
+    className={`p-6 rounded-2xl shadow-lg transition-all duration-500 cursor-default ${
+      theme === "light"
+        ? "bg-white hover:shadow-[0_0_25px_#ff6a89]"
+        : "bg-gray-800 hover:shadow-[0_0_25px_#ff6a89]"
+    }`}
   >
     <div className="flex items-center justify-between mb-3">
       <div className="flex items-center gap-4">
         {skill.icon}
-        <h4 className="text-lg font-semibold text-gray-900">{skill.name}</h4>
+        <h4
+          className={`text-lg font-semibold ${
+            theme === "light" ? "text-gray-900" : "text-gray-100"
+          }`}
+        >
+          {skill.name}
+        </h4>
       </div>
-      <span className="text-sm font-medium text-gray-500">{skill.level}%</span>
+      <span
+        className={`text-sm font-medium ${
+          theme === "light" ? "text-gray-500" : "text-gray-300"
+        }`}
+      >
+        {skill.level}%
+      </span>
     </div>
-    <div className="w-full bg-gray-200 rounded-full h-5 overflow-hidden">
+    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-5 overflow-hidden">
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: `${skill.level}%` }}
@@ -58,8 +75,12 @@ const SkillCard = ({ skill, index }) => (
   </motion.div>
 );
 
-const LoadingDots = () => (
-  <div className="min-h-screen flex justify-center items-center bg-base-300">
+const LoadingDots = ({ theme }) => (
+  <div
+    className={`min-h-screen flex justify-center items-center ${
+      theme === "light" ? "bg-gray-200" : "bg-gray-900"
+    }`}
+  >
     <div className="flex gap-3">
       {[...Array(5)].map((_, i) => (
         <motion.div
@@ -75,6 +96,7 @@ const LoadingDots = () => (
 
 const Skills = () => {
   const [loading, setLoading] = useState(true);
+  const { theme } = useTheme(); // Theme context
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
@@ -82,38 +104,61 @@ const Skills = () => {
   }, []);
 
   if (loading) {
-    return <LoadingDots />;
+    return <LoadingDots theme={theme} />;
   }
 
   return (
-    <section id="skills" className="py-6 bg-base-200">
+    <section
+      id="skills"
+      className={`py-6 ${
+        theme === "light" ? "bg-gray-100 text-gray-800" : "bg-gray-900 text-gray-200"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-20">
         {/* Frontend Skills */}
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-gray-600 mb-6">Frontend Skills</h3>
+          <h3
+            className={`text-3xl font-bold mb-6 ${
+              theme === "light" ? "text-gray-700" : "text-gray-100"
+            }`}
+          >
+            Frontend Skills
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {frontendSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} index={index} />
+              <SkillCard key={index} skill={skill} index={index} theme={theme} />
             ))}
           </div>
         </div>
 
         {/* Backend Skills */}
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-gray-600 mb-6">Backend Skills</h3>
+          <h3
+            className={`text-3xl font-bold mb-6 ${
+              theme === "light" ? "text-gray-700" : "text-gray-100"
+            }`}
+          >
+            Backend Skills
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {backendSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} index={index} />
+              <SkillCard key={index} skill={skill} index={index} theme={theme} />
             ))}
           </div>
         </div>
 
         {/* Other Skills */}
         <div>
-          <h3 className="text-3xl font-bold text-gray-600 mb-6">Other Skills</h3>
+          <h3
+            className={`text-3xl font-bold mb-6 ${
+              theme === "light" ? "text-gray-700" : "text-gray-100"
+            }`}
+          >
+            Other Skills
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} index={index} />
+              <SkillCard key={index} skill={skill} index={index} theme={theme} />
             ))}
           </div>
         </div>

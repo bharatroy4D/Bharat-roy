@@ -16,6 +16,7 @@ import Login from './Components/Navbar/Login/Login.jsx';
 import HireMe from './Components/HireMe/HireMe.jsx';
 import Hero from './Components/Navbar/Hero/Hero.jsx';
 import Qualification from './Components/Navbar/Qualification/Qualification.jsx';
+import ThemeProvider from './context/ThemeProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,19 +48,21 @@ const router = createBrowserRouter([
         element: <HireMe />,
       },
       {
-        path:'/hero',
-        element:<Hero/>
+        path: '/hero',
+        element: <Hero />
       },
       {
-        path:'/qualification',
-        element:<Qualification/>
+        path: '/qualification',
+        element: <Qualification />
       }
     ]
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+  <ThemeProvider>
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>,
+  </ThemeProvider>
 )
