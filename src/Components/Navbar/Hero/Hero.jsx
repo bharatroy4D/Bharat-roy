@@ -110,6 +110,7 @@ const Hero = () => {
                                 <FaGithub className="hover:text-gray-600 cursor-pointer" />
                             </a>
                         </div>
+                        
                     </div>
 
                     {/* Resume Section */}

@@ -20,7 +20,7 @@ const Header = () => {
                             to={path}
                             onClick={handleLinkClick}
                             className={({ isActive }) =>
-                                `${isActive ? 'text-blue-500 font-bold underline underline-offset-8' : 'text-gray-700 dark:text-gray-200'} 
+                                `${isActive ? 'text-blue-500 font-bold underline underline-offset-8' : ''} 
                                 relative transition duration-300 hover:text-blue-600`
                             }
                         >
