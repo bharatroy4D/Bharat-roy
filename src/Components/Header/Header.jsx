@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeProvider';
+import { div } from 'framer-motion/client';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { theme, toggleTheme } = useTheme(); // theme context use
@@ -116,6 +117,15 @@ const Header = () => {
                         {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
                     </button>
                 </div>
+            </div>
+            <div>
+                {/* backdrop */}
+                {isOpen && (
+                    <div className='fixed inset-0 bg-black opacity-25 z-50'
+                        onClick={() => setIsOpen(!isOpen)}>
+
+                    </div>
+                )}
             </div>
         </>
     );
