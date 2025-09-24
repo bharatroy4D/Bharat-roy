@@ -37,7 +37,7 @@ const Header = () => {
         <>
             <header
                 className={`sticky top-0 z-50 w-full shadow-md transition-colors duration-300
-                ${theme === 'light' ? 'bg-white text-black' : 'bg-gray-800 text-white'}`}
+                ${theme === 'light' ? 'bg-gray-100/90 text-black' : 'bg-gray-800/95 text-white'}`}
             >
                 <div className="lg:max-w-7xl mx-auto flex items-center justify-between py-2 px-5 md:10 lg:px-20">
                     {/* Logo */}
